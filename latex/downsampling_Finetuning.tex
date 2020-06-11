@@ -1,0 +1,72 @@
+\begin{table}
+\centering
+\caption{Downsampled finetuning starting from various standard and robust ImageNet models.}
+\label{app:downsampling-Finetuning}
+\begin{tabular}{l|l|cccccccccc}
+\toprule
+       & {} & \multicolumn{10}{l}{Transfer Accuracy} \\
+       & \textbf{eps} &              0.00 &  0.01 &  0.03 &  0.05 &  0.10 &  0.25 &  0.50 &  1.00 &  3.00 &  5.00 \\
+\textbf{Dataset} & \textbf{Model} &                   &       &       &       &       &       &       &       &       &       \\
+\midrule
+\multirow{4}{*}{\textbf{Aircraft}} & \textbf{ResNet-18} &             58.24 & 58.27 & 59.29 & 58.96 & 60.28 & 60.22 & 59.83 & 60.88 & \textbf{61.78} & 60.88 \\
+       & \textbf{ResNet-50} &             65.77 & 65.20 & 65.62 & 66.22 & 65.68 & 67.12 & 66.49 & 66.04 & \textbf{68.02} & 67.12 \\
+       & \textbf{WRN-50-2} &             66.41 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & 66.40 & \textbf{67.51} &   NaN \\
+       & \textbf{WRN-50-4} &             65.56 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & 66.12 & \textbf{68.36} &   NaN \\
+\cline{1-12}
+\multirow{4}{*}{\textbf{Birdsnap}} & \textbf{ResNet-18} &             46.32 & 46.65 & 45.94 & 46.55 & 46.26 & 46.57 & 46.26 & \textbf{46.80} & 45.23 & 44.76 \\
+       & \textbf{ResNet-50} &             52.28 & 51.98 & 51.77 & 52.11 & 52.20 & 52.42 & \textbf{52.58} & 51.77 & 51.72 & 51.29 \\
+       & \textbf{WRN-50-2} &             53.22 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & \textbf{54.22} & 53.70 &   NaN \\
+       & \textbf{WRN-50-4} &             54.46 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & \textbf{55.87} & 54.82 &   NaN \\
+\cline{1-12}
+\multirow{4}{*}{\textbf{CIFAR-10}} & \textbf{ResNet-18} &             96.50 & 96.38 & 96.51 & 96.62 & 96.78 & 96.86 & 97.12 & 97.04 & \textbf{97.14} & 97.05 \\
+       & \textbf{ResNet-50} &             97.30 & 97.32 & 97.54 & 97.56 & 97.62 & 97.79 & 97.98 & 98.10 & \textbf{98.27} & 98.16 \\
+       & \textbf{WRN-50-2} &             97.51 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & 98.20 & \textbf{98.38} &   NaN \\
+       & \textbf{WRN-50-4} &             97.79 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & 98.56 & \textbf{98.76} &   NaN \\
+\cline{1-12}
+\multirow{4}{*}{\textbf{CIFAR-100}} & \textbf{ResNet-18} &             82.36 & 82.57 & 82.89 & 82.92 & 83.31 & 83.90 & 84.30 & \textbf{84.41} & 83.77 & 83.47 \\
+       & \textbf{ResNet-50} &             85.15 & 85.37 & 85.64 & 85.68 & 85.92 & 86.45 & 86.81 & 87.32 & \textbf{87.45} & 86.60 \\
+       & \textbf{WRN-50-2} &             85.47 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & \textbf{87.79} & 87.73 &   NaN \\
+       & \textbf{WRN-50-4} &             86.36 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & \textbf{89.16} & 88.90 &   NaN \\
+\cline{1-12}
+\multirow{4}{*}{\textbf{Caltech-101}} & \textbf{ResNet-18} &             79.33 & 78.64 & 78.95 & 79.94 & 79.70 & 81.13 & 81.55 & \textbf{83.13} & 82.30 & 79.80 \\
+       & \textbf{ResNet-50} &             82.18 & 83.05 & 84.50 & 84.72 & 84.74 & 85.62 & 86.12 & \textbf{86.61} & 85.88 & 85.20 \\
+       & \textbf{WRN-50-2} &             84.79 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & 87.96 & \textbf{88.12} &   NaN \\
+       & \textbf{WRN-50-4} &             84.47 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & 89.43 & \textbf{89.59} &   NaN \\
+\cline{1-12}
+\multirow{4}{*}{\textbf{Caltech-256}} & \textbf{ResNet-18} &             63.32 & 64.45 & 64.02 & 64.55 & 65.18 & 66.00 & \textbf{66.52} & 65.41 & 64.35 & 63.03 \\
+       & \textbf{ResNet-50} &             68.02 & 68.09 & 68.63 & 69.42 & 68.96 & 70.10 & 70.60 & \textbf{70.66} & 69.90 & 68.94 \\
+       & \textbf{WRN-50-2} &             69.42 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & \textbf{73.61} & 72.83 &   NaN \\
+       & \textbf{WRN-50-4} &             70.36 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & \textbf{77.24} & 75.84 &   NaN \\
+\cline{1-12}
+\multirow{4}{*}{\textbf{Cars}} & \textbf{ResNet-18} &             68.83 & 68.55 & 68.62 & 68.98 & 69.53 & 69.28 & \textbf{69.68} & 69.27 & 67.99 & 67.42 \\
+       & \textbf{ResNet-50} &             74.84 & 74.95 & 74.13 & 75.23 & 74.61 & 75.29 & \textbf{75.92} & 75.51 & 75.19 & 74.65 \\
+       & \textbf{WRN-50-2} &             75.69 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & 76.13 & \textbf{76.61} &   NaN \\
+       & \textbf{WRN-50-4} &             75.62 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & \textbf{76.37} & 75.84 &   NaN \\
+\cline{1-12}
+\multirow{4}{*}{\textbf{DTD}} & \textbf{ResNet-18} &             49.57 & 48.40 & 50.43 & 48.88 & 49.20 & 50.27 & 50.00 & \textbf{50.74} & 50.32 & \textbf{50.74} \\
+       & \textbf{ResNet-50} &             50.69 & 52.50 & 51.01 & 51.60 & 51.65 & 52.66 & 54.15 & 52.71 & 54.26 & \textbf{55.53} \\
+       & \textbf{WRN-50-2} &             51.54 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & 54.26 & \textbf{55.96} &   NaN \\
+       & \textbf{WRN-50-4} &             52.34 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & \textbf{56.86} & 56.38 &   NaN \\
+\cline{1-12}
+\multirow{4}{*}{\textbf{Flowers}} & \textbf{ResNet-18} &             85.96 & 86.05 & 86.02 & 86.03 & 86.40 & 86.25 & \textbf{86.41} & 86.03 & 85.33 & 84.60 \\
+       & \textbf{ResNet-50} &             88.75 & 88.30 & 88.57 & 88.27 & \textbf{88.81} & 88.69 & 88.70 & 88.37 & 88.67 & 87.83 \\
+       & \textbf{WRN-50-2} &             88.61 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & \textbf{89.08} & 88.86 &   NaN \\
+       & \textbf{WRN-50-4} &             89.05 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & \textbf{89.75} & 89.07 &   NaN \\
+\cline{1-12}
+\multirow{4}{*}{\textbf{Food}} & \textbf{ResNet-18} &             71.77 & 71.83 & 71.73 & 71.64 & 71.60 & 71.64 & \textbf{72.10} & 71.63 & 71.78 & 71.37 \\
+       & \textbf{ResNet-50} &             75.83 & 75.19 & 75.52 & 75.51 & 75.50 & 75.37 & \textbf{76.11} & 75.91 & 75.76 & 75.61 \\
+       & \textbf{WRN-50-2} &             76.02 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & 76.45 & \textbf{76.48} &   NaN \\
+       & \textbf{WRN-50-4} &             76.24 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & \textbf{76.49} & 76.42 &   NaN \\
+\cline{1-12}
+\multirow{4}{*}{\textbf{Pets}} & \textbf{ResNet-18} &             76.32 & 77.35 & 77.71 & 78.05 & 78.63 & 78.70 & \textbf{78.75} & 77.82 & 75.72 & 72.21 \\
+       & \textbf{ResNet-50} &             82.34 & 81.95 & 82.64 & 82.24 & 82.52 & 83.59 & 83.57 & \textbf{83.72} & 81.87 & 79.33 \\
+       & \textbf{WRN-50-2} &             83.03 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & \textbf{85.32} & 84.28 &   NaN \\
+       & \textbf{WRN-50-4} &             83.64 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & \textbf{88.20} & 86.92 &   NaN \\
+\cline{1-12}
+\multirow{4}{*}{\textbf{SUN397}} & \textbf{ResNet-18} &             42.81 & 42.65 & 43.40 & 43.35 & 44.01 & 44.20 & 44.51 & \textbf{44.61} & 44.31 & 43.54 \\
+       & \textbf{ResNet-50} &             44.64 & 44.95 & 44.73 & 45.09 & 45.44 & 45.93 & 46.74 & 47.24 & \textbf{47.47} & 47.15 \\
+       & \textbf{WRN-50-2} &             45.51 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & 48.10 & \textbf{49.36} &   NaN \\
+       & \textbf{WRN-50-4} &             46.10 &   NaN &   NaN &   NaN &   NaN &   NaN &   NaN & \textbf{50.61} & 50.50 &   NaN \\
+\bottomrule
+\end{tabular}
+\end{table}

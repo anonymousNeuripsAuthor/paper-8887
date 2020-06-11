@@ -1,0 +1,18 @@
+\begin{table}
+\centering
+\caption{Transfer Accuracy on CIFAR-10 and CIFAR-100 using standard/robust common network architectures pretrained on ImageNet..}
+\label{table:transfer-vary-arch}
+\begin{tabular}{llrrrrrr}
+\toprule
+          & {} & \multicolumn{6}{l}{Transfer Accuracy(\%)} \\
+          & \textbf{Model} &         DenseNet-161 & MNASNET & MobileNet-v2 & ResNeXt50 & ShuffleNet & VGG16-bn \\
+\textbf{Dataset} & \textbf{eps} &                      &         &              &           &            &          \\
+\midrule
+\multirow{2}{*}{\textbf{CIFAR-10}} & \textbf{0} &                97.84 &   95.55 &        95.86 &     97.47 &      95.82 &    96.08 \\
+          & \textbf{3} &                98.67 &   95.99 &        96.91 &     98.22 &      96.23 &    97.27 \\
+\cline{1-8}
+\multirow{2}{*}{\textbf{CIFAR-100}} & \textbf{0} &                86.53 &   80.41 &        80.02 &     85.53 &      80.76 &    82.07 \\
+          & \textbf{3} &                88.65 &   80.52 &        83.32 &     88.32 &      80.92 &    84.14 \\
+\bottomrule
+\end{tabular}
+\end{table}

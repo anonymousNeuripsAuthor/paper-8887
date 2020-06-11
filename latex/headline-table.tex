@@ -1,0 +1,18 @@
+\begin{table}
+\centering
+\caption{Best transfer accuracies accros various models and datasets with robust vs. standard pretraining.}
+\label{table:headline-table}
+\begin{tabular}{llrrrrrrrrrrrr}
+\toprule
+             & {} & \multicolumn{12}{l}{Transfer Accuracy (\%)} \\
+             & \textbf{Dataset} &              Aircraft & Birdsnap & CIFAR-10 & CIFAR-100 & Caltech-101 & Caltech-256 &  Cars &   DTD & Flowers &  Food &  Pets & SUN397 \\
+\textbf{Mode} & \textbf{Model} &                       &          &          &           &             &             &       &       &         &       &       &        \\
+\midrule
+\multirow{2}{*}{\textbf{Fixed-feature}} & \textbf{Adv} &                 43.38 &    49.19 &    95.53 &     81.08 &       92.32 &       83.34 & 48.74 & 70.22 &   91.26 & 65.95 & 91.85 &  55.74 \\
+             & \textbf{Std} &                 38.69 &    48.35 &    81.31 &     60.14 &       90.12 &       82.78 & 44.63 & 70.09 &   91.90 & 65.79 & 91.83 &  55.92 \\
+\cline{1-14}
+\multirow{2}{*}{\textbf{Full-network}} & \textbf{Adv} &                 86.08 &    76.06 &    98.68 &     89.04 &       95.29 &       87.31 & 91.48 & 75.94 &   97.21 & 88.99 & 94.24 &  64.74 \\
+             & \textbf{Std} &                 86.57 &    75.71 &    97.63 &     85.99 &       94.75 &       86.55 & 91.52 & 75.80 &   97.04 & 88.64 & 94.20 &  63.72 \\
+\bottomrule
+\end{tabular}
+\end{table}

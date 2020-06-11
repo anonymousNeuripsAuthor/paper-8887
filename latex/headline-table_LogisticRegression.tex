@@ -1,0 +1,24 @@
+\begin{table}
+\centering
+\caption{Best LogisticRegression transfer accuracies accros various models and datasets with robust vs. standard pretraining.}
+\label{table:headline-table-LogisticRegression}
+\begin{tabular}{llrrrrrrrrrrrr}
+\toprule
+         & {} & \multicolumn{12}{l}{Transfer Accuracy (\%)} \\
+         & \textbf{Dataset} &              Aircraft & Birdsnap & CIFAR-10 & CIFAR-100 & Caltech-101 & Caltech-256 &  Cars &   DTD & Flowers &  Food &  Pets & SUN397 \\
+\textbf{Model} & \textbf{PreTrained} &                       &          &          &           &             &             &       &       &         &       &       &        \\
+\midrule
+\multirow{2}{*}{\textbf{ResNet-18}} & \textbf{Robust} &                 41.40 &    45.88 &    91.59 &     73.91 &       89.49 &       78.40 & 45.59 & 66.01 &   91.26 & 60.20 & 89.03 &  51.32 \\
+         & \textbf{Standard} &                 38.69 &    45.54 &    75.91 &     54.58 &       86.30 &       77.58 & 43.35 & 66.84 &   90.80 & 59.96 & 89.55 &  51.74 \\
+\cline{1-14}
+\multirow{2}{*}{\textbf{ResNet-50}} & \textbf{Robust} &                 41.83 &    49.19 &    94.77 &     79.43 &       91.07 &       82.51 & 47.28 & 70.22 &   91.26 & 65.95 & 91.27 &  54.82 \\
+         & \textbf{Standard} &                 37.27 &    48.35 &    79.61 &     57.94 &       88.95 &       82.21 & 44.52 & 68.14 &   91.28 & 65.49 & 90.93 &  54.69 \\
+\cline{1-14}
+\multirow{2}{*}{\textbf{WRN-50-2}} & \textbf{Robust} &                 41.20 &    48.69 &    95.19 &     80.61 &       91.80 &       83.34 & 46.83 & 68.87 &   90.97 & 65.73 & 91.85 &  54.53 \\
+         & \textbf{Standard} &                 37.59 &    47.54 &    81.31 &     60.14 &       90.12 &       82.78 & 44.63 & 70.09 &   91.90 & 65.79 & 91.82 &  55.57 \\
+\cline{1-14}
+\multirow{2}{*}{\textbf{WRN-50-4}} & \textbf{Robust} &                 43.38 &    46.53 &    95.53 &     81.08 &       92.32 &       83.27 & 48.74 & 65.69 &   89.90 & 65.53 & 90.23 &  55.74 \\
+         & \textbf{Standard} &                 35.74 &    45.45 &    79.81 &     57.68 &       89.34 &       82.68 & 43.02 & 67.86 &   90.67 & 65.04 & 91.83 &  55.92 \\
+\bottomrule
+\end{tabular}
+\end{table}

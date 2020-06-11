@@ -1,0 +1,25 @@
+\begin{table}
+\centering
+\caption{Transfer Accuracy of standard vs linf-robust ImageNet models on CIFAR-10 and CIFAR-100.}
+\label{app:small-datasets-linf}
+\begin{tabular}{lllrrrrrr}
+\toprule
+          &                     & {} & \multicolumn{6}{l}{Transfer Accuracy} \\
+          &                     & \textbf{eps} &               0.0 &   0.5 &   1.0 &   2.0 &   4.0 &   8.0 \\
+\textbf{Dataset} & \textbf{Transfer Type} & \textbf{Model} &                   &       &       &       &       &       \\
+\midrule
+\multirow{4}{*}{\textbf{CIFAR-10}} & \multirow{2}{*}{\textbf{Finetuning}} & \textbf{ResNet-18} &             96.05 & 96.85 & 96.80 & 96.98 & \textbf{97.04} & 96.79 \\
+          &                     & \textbf{ResNet-50} &             97.14 & 97.69 & 97.84 & 97.98 & 97.92 & 98.01 \\
+\cline{2-9}
+          & \multirow{2}{*}{\textbf{Logistic Regression}} & \textbf{ResNet-18} &             75.02 & 87.13 & 89.01 & 89.07 & \textbf{90.56} & 89.18 \\
+          &                     & \textbf{ResNet-50} &             78.16 & 90.55 & 91.51 & 92.74 & 93.35 & 93.68 \\
+\cline{1-9}
+\cline{2-9}
+\multirow{4}{*}{\textbf{CIFAR-100}} & \multirow{2}{*}{\textbf{Finetuning}} & \textbf{ResNet-18} &             81.70 & 83.66 & 83.46 & \textbf{83.98} & 83.55 & 82.82 \\
+          &                     & \textbf{ResNet-50} &             84.75 & 86.12 & 86.48 & 87.06 & 86.90 & 86.21 \\
+\cline{2-9}
+          & \multirow{2}{*}{\textbf{Logistic Regression}} & \textbf{ResNet-18} &             53.86 & 68.52 & 70.83 & 72.00 & \textbf{72.19} & 69.78 \\
+          &                     & \textbf{ResNet-50} &             55.57 & 72.89 & 74.16 & 76.22 & 77.17 & 76.70 \\
+\bottomrule
+\end{tabular}
+\end{table}
