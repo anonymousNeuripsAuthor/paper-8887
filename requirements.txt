@@ -12,4 +12,4 @@ seaborn
 jupyter
 cox
 sklearn
-pillow==6.1
+pillow==8.1.1
